@@ -1,6 +1,6 @@
 // setup our gloabl variables
 var currentContent = "main";
-var baseUrl = "http://127.0.0.1:9000";
+var baseUrl = "";
 var bAffiliates = false;
 
 // used to map name to input (textbox)
@@ -126,7 +126,7 @@ function includeHTML(id) {
  */
 function getAffiliateData() {
   xhttp = new XMLHttpRequest();
-  xhttp.open("GET", baseUrl + "/api/v1/affiliates" , true);
+  xhttp.open("GET", baseUrl + "/dbservice/api/v1/affiliates" , true);
   xhttp.send();
 
   xhttp.onreadystatechange = function() {
@@ -164,7 +164,7 @@ function getPublicationData() {
   elA.innerHTML="";
   
   xhttp = new XMLHttpRequest();
-  xhttp.open("GET", baseUrl + "/api/v1/publications/"+y[x].value, true);
+  xhttp.open("GET", baseUrl + "/dbservice/api/v1/publications/"+y[x].value, true);
   xhttp.send();
 
   xhttp.onreadystatechange = function() {
@@ -199,7 +199,7 @@ function getStockData() {
   var elA = document.getElementById('cmbStocks');
   elA.innerHTML = "";
   xhttp = new XMLHttpRequest();
-  xhttp.open("GET", baseUrl + "/api/v1/stocks/"+y[x].value, true);
+  xhttp.open("GET", baseUrl + "/dbservice/api/v1/stocks/"+y[x].value, true);
   xhttp.send();
 
   xhttp.onreadystatechange = function() {
@@ -351,7 +351,7 @@ function saveStockData() {
   // if (!validateProfileData()) {
 
     xhttp = new XMLHttpRequest();
-    xhttp.open("PUT", baseUrl + "/api/v1/stocks/" + txtIDHidden.value , true);
+    xhttp.open("PUT", baseUrl + "/dbservice/api/v1/stocks/" + txtIDHidden.value , true);
     xhttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhttp.send(rendered);
 
