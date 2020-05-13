@@ -1,0 +1,38 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kaniko-trackmate-reverse-proxy
+spec:
+  parallelism: 1    
+  completions: 1    
+  template:         
+    metadata:
+      name: kaniko-trackmate-reverse-proxy
+    spec:
+      containers:
+      - name: kaniko
+        image: gcr.io/kaniko-project/executor:latest
+        args: [
+          "--dockerfile=/godata/pipelines/trackmate-reverse-proxy/Dockerfile",
+          "--context=/godata/pipelines/trackmate-reverse-proxy",
+          "--destination=tfld-docker-prd-local.repo.14west.io/trackmate-reverse-proxy:latest"
+        ]
+        volumeMounts:
+        - mountPath: /godata
+          name: gocdagent-data
+        - mountPath: /kaniko/.docker/config.json
+          name: docker-creds
+          subPath: config.json
+        env:
+        - name: DESITINATION
+        value: tfld-docker-prd-local.repo.14west.io/trackmate-reverse-proxy:latest
+      restartPolicy: Never   
+      volumes:
+      - name: gocdagent-data
+        persistentVolumeClaim:
+          claimName: gocdagent-node-and-go
+      - name: docker-creds
+        configMap:
+          defaultMode: 420
+          name: configcontent
+      backoffLimit: 1
