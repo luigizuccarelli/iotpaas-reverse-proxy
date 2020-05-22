@@ -1,6 +1,6 @@
 {
   "name": "dev",
   "pipelines": [
-    "trackmate-reverse-proxy"
+    "servisbot-reverse-proxy"
   ]
 }

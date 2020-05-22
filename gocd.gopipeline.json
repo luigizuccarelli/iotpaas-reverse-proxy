@@ -2,7 +2,7 @@
   "format_version" : 1,
   "label_template": "${COUNT}",
   "enable_pipeline_locking": false,
-  "name": "trackmate-reverse-proxy",
+  "name": "servisbot-reverse-proxy",
   "group" : "Trackmate",
   "tracking_tool": null,
   "timer": null,
@@ -16,7 +16,7 @@
   "materials": [
     {
       "type": "git",
-      "url": "http://cicd:cicd01@gitea.cicd.svc.cluster.local:3000/cicd/trackmate-reverse-proxy.git",
+      "url": "http://cicd:cicd01@gitea.cicd.svc.cluster.local:3000/cicd/servisbot-reverse-proxy.git",
       "destination": null,
       "filter": null,
       "name": "scm",

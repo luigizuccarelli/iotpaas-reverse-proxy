@@ -3,10 +3,10 @@
 # All parameter fields are required for the script to execute
 
 # declare some variables
-PROJECT="trackmate-reverse-proxy"
-jobname="kaniko-trackmate-reverse-proxy"
-deploymentconfig="trackmate-reverse-proxy"
-namespace="trackmate"
+PROJECT="servisbot-reverse-proxy"
+jobname="kaniko-servisbot-reverse-proxy"
+deploymentconfig="servisbot-reverse-proxy"
+namespace="servisbot"
 
 
 # some variable checks
