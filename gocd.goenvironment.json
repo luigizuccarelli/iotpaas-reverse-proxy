@@ -1,6 +1,6 @@
 {
   "name": "dev",
   "pipelines": [
-    "servisbot-reverse-proxy"
+    "common-reverse-proxy"
   ]
 }

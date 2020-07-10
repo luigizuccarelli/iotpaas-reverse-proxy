@@ -6,7 +6,7 @@
 PROJECT="common-reverse-proxy"
 jobname="kaniko-common-reverse-proxy"
 deploymentconfig="common-reverse-proxy"
-namespace="servisbot"
+namespace="agoracxp"
 
 
 # some variable checks
