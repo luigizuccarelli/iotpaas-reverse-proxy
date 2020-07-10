@@ -3,7 +3,7 @@
   "label_template": "${COUNT}",
   "enable_pipeline_locking": false,
   "name": "common-reverse-proxy",
-  "group" : "ServisBOT",
+  "group" : "Common",
   "tracking_tool": null,
   "timer": null,
   "environment_variables": [],
