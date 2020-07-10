@@ -1,4 +1,4 @@
-# servisbot-reverse-proxy nginx with auth
+# common-reverse-proxy nginx with auth
 
 ## Requirements
 
@@ -7,7 +7,7 @@
 ## Build
 
 ```bash
-docker build -t tfld-docker-prd-local.repo.14west.io/servisbot-reverse-proxy .
+docker build -t tfld-docker-prd-local.repo.14west.io/common-reverse-proxy .
 docker push tfld-docker-prd-local.repo.14west.io
 
 ```
