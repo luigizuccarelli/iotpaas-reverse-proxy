@@ -15,7 +15,7 @@ spec:
         args: [
           "--dockerfile=/godata/pipelines/common-reverse-proxy/Dockerfile",
           "--context=/godata/pipelines/common-reverse-proxy",
-          "--destination=tfld-docker-prd-local.repo.14west.io/common-reverse-proxy:latest"
+          "--destination=quay.io/14west/common-reverse-proxy:latest"
         ]
         volumeMounts:
         - mountPath: /godata
@@ -25,7 +25,7 @@ spec:
           subPath: config.json
         env:
         - name: DESITINATION
-        value: tfld-docker-prd-local.repo.14west.io/common-reverse-proxy:latest
+        value: quay.io/14west/common-reverse-proxy:latest
       restartPolicy: Never   
       volumes:
       - name: gocdagent-data
