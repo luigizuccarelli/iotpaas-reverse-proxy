@@ -1,6 +1,0 @@
-{
-  "name": "dev",
-  "pipelines": [
-    "common-reverse-proxy"
-  ]
-}
